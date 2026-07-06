@@ -1,0 +1,165 @@
+.dashboard-shell {
+  display: grid;
+  gap: 1.25rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f1f5fe 100%);
+  min-height: 100vh;
+}
+
+.hero-card,
+.stat-card,
+.controls-card,
+.list-card {
+  background: #fff;
+  border: 1px solid #b3e5fc;
+  border-radius: 1rem;
+  box-shadow: 0 12px 35px rgba(2, 136, 209, 0.08);
+}
+
+.hero-card {
+  padding: 2rem;
+  background: linear-gradient(135deg, #e1f5fe 0%, #f1f5fe 100%);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0277bd;
+  margin-bottom: 0.75rem;
+}
+
+.hero-copy {
+  max-width: 720px;
+  color: #01579b;
+  font-size: 1.05rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stat-card {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f1f5fe 100%);
+}
+
+.stat-card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.7rem;
+  color: #01579b;
+}
+
+.stat-card p {
+  color: #0277bd;
+  margin: 0;
+}
+
+.controls-card {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: #01579b;
+}
+
+.field input,
+.field select {
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #81d4fa;
+  border-radius: 0.75rem;
+  font: inherit;
+  background: #fff;
+  color: #01579b;
+}
+
+.list-card {
+  padding: 1.25rem;
+}
+
+.city-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.city-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.9rem;
+  background: #e1f5fe;
+  border: 1px solid #b3e5fc;
+}
+
+.city-item h3 {
+  margin: 0 0 0.3rem;
+  color: #01579b;
+}
+
+.city-item p {
+  margin: 0;
+  color: #0277bd;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: flex-end;
+  color: #0277bd;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: #b3e5fc;
+  color: #01579b;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.pill.temp {
+  background: #ffccbc;
+  color: #d84315;
+}
+
+.status {
+  margin: 0;
+  color: #0277bd;
+}
+
+.status.error {
+  color: #c62828;
+}
+
+@media (max-width: 800px) {
+  .stats-grid,
+  .controls-card {
+    grid-template-columns: 1fr;
+  }
+
+  .city-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .meta {
+    align-items: flex-start;
+  }
+}
